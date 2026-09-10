@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="image.png" type="image/png">
+    <style>
+        :root{
+            --ink: #2b2118;
+            --accent: #c1440e;
+            --bg: #fff;
+            --line: #e6dccb;
+        }
+        body{
+            margin: 0;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        header{
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            background: var(--ink);
+            color: white;
+            min-height: 75px;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+        nav a{
+            text-decoration: none;
+            color: #f3d6ac;
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+        nav a:hover{
+            color: var(--accent)
+        }
+        header h1{
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+        .hero{
+            background: 
+            linear-gradient(rgba(212, 119, 37, 0.5), rgba(0, 0, 0, 0.5)), url(hero1.png) center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px;
+            height: fit-content;
+        }
+        .hero h2{
+            margin: 0;
+            font-size: 3rem;
+        }
+        main{
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        h2.section-title{
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        .menu-category >  ul{
+            list-style-type: none;
+            
+        }
+        .menu-category li{
+            border-bottom: 1px solid var(--line);
+            padding: 2px 0;
+        }
+        #gallery{
+            max-width: 960px;
+            border-bottom: 2px solid var(--accent);
+        }
+        #gallery .section-title {
+            display: flex;
+        }
+        .gallery{
+            display: flex;
+            flex-direction: row;
+        }
+        .gallery figure img{
+            height: 150px;
+            width: 150px ;
+            transition: all 1s;
+        }
+        .gallery figcaption{
+            text-align: center;
+        }
+        .gallery figure img:hover{
+            transform: scale(1.22);
+            padding-bottom: 30px;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid var(--line);
+        }
+        thead{
+            background-color: var(--accent);
+        }
+        tr, th, td{
+            border: 2px solid var(--line);
+        }
+        #reviews .reviews{
+            display: flex;
+            justify-content: space-evenly;
+        }
+                footer {
+            background: var(--ink);
+            color: #f3d6ac;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        
+        footer h3 {
+            margin: 0 0 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #f3d6ac;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        
+        footer a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #665548;
+            margin-top: 20px;
+            padding-top: 15px;
+            font-size: 0.9rem;
+        }
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            box-sizing: border-box;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        @media screen and (max-width: 1000px) {
+            header{
+                padding: 15px 25px;
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            header h1{
+                font-size: 1.6rem;
+            }
+
+            nav{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px 12px;
+            }
+
+            nav a{
+                margin-left: 0;
+                font-size: 0.9rem;
+            }
+
+            .hero{
+                padding: 70px 20px;
+                min-height: 220px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+
+            .hero h2{
+                font-size: 2.2rem;
+            }
+
+            main{
+                width: 100%;
+                max-width: 960px;
+                padding: 30px;
+                box-sizing: border-box;
+            }
+
+            .menu-category ul{
+                padding-left: 20px;
+            }
+
+            #gallery{
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .gallery{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .gallery figure{
+                margin: 0;
+                text-align: center;
+            }
+
+            .gallery figure img{
+                width: 100%;
+                max-width: 150px;
+                height: auto;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
+
+            .gallery figure img:hover{
+                transform: scale(1.05);
+                padding-bottom: 0;
+            }
+
+            .gallery figcaption{
+                font-size: 0.8rem;
+            }
+
+            #reviews .reviews{
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+            }
+
+            #reviews .reviews article{
+                flex: 1 1 250px;
+            }
+
+            table{
+                width: 100%;
+                font-size: 0.85rem;
+            }
+
+            tr, th, td{
+                border: 1.8px solid var(--line);
+                padding: 7px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            header{
+                padding: 12px 15px;
+            }
+
+            header h1{
+                font-size: 1.4rem;
+            }
+
+            nav{
+                width: 100%;
+                gap: 5px 10px;
+            }
+
+            nav a{
+                font-size: 0.78rem;
+            }
+
+            .hero{
+                padding: 55px 15px;
+                min-height: 200px;
+            }
+
+            .hero h2{
+                font-size: 1.7rem;
+                line-height: 1.3;
+            }
+
+            main{
+                padding: 20px 15px;
+            }
+
+            h2.section-title{
+                font-size: 1.25rem;
+            }
+
+            .menu-category h3{
+                font-size: 1rem;
+            }
+
+            .menu-category ul li{
+                font-size: 0.85rem;
+            }
+
+            .gallery{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .gallery figure img{
+                max-width: 130px;
+            }
+
+            #reviews .reviews{
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #reviews .reviews article{
+                width: 100%;
+            }
+
+            #reviews .reviews h3{
+                font-size: 0.95rem;
+            }
+
+            #reviews .reviews p{
+                font-size: 0.75rem;
+            }
+
+            table{
+                font-size: 0.75rem;
+            }
+
+            tr, th, td{
+                padding: 6px 4px;
+                font-size: 0.75rem;
+            }
+
+            footer{
+                padding: 25px 15px;
+            }
+
+            footer a{
+                display: inline-block;
+                margin: 4px 6px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Spice Route</h1>
+        <nav>
+            <a href="#special">Today's Special</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#hours">Opening Time</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>Authentic Flavours, Homely Taste</h2>
+    </div>
+    <main>
+    <section id="special">
+        <h2 class="section-title">Today's Special</h2>
+        <article>
+            <h3>Panner Butter Masala Thali</h3>
+            <p>Served with Butter Naan, Laccha Paratha, Dal, Rice, Sweet of the Day</p>
+        </article>
+    </section>
+    <section id="menu">
+        <h2 class="section-title">Menu</h2>
+        <div class="menu-category">
+            <h3>Veg</h3>
+            <ul>
+                <li>Sabzi
+                    <ul>
+                        <li>Mix Veg</li>
+
+                    </ul>
+                </li>
+                <li>Panner
+                    <ul>
+                        <li>Panner Tikka</li>
+                        <li>Panner Butter Masala</li>
+                    </ul>
+                </li>
+                <li>
+                    Dal
+                    <ul>
+                        <li>Dal Makhani</li>
+                        <li>Dal Tadka</li>
+                        <li>Dal Fry</li>
+                        <li>Arhr Dal</li>
+                    </ul>
+                </li>
+                <li>Rice
+                    <ul>
+                        <li>Veg Pulao</li>
+                        <li>Jeera Rice</li>
+                        <li>Plain Rice</li>
+                        <li>Fried Rice</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Dessert</h3>
+            
+        </div>
+        <div class="menu-category">
+            <ul>
+                <li>Ice-Cream
+                    <ul>
+                        <li>Vanilla</li>
+                        <li>Chocalate</li>
+                        <li>Raj Bhog</li>
+                        <li>Stawberry</li>
+                    </ul>
+                </li>
+                <li>Ras Malai</li>
+                <li>Gulab Jamun</li>
+                <li>Kheer</li>
+                <li>Milk Cake</li>
+                <li>Jalebi</li>
+            </ul>
+        </div>
+    </section>
+    <section id="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+            <figure>
+                <img src="paneertikka.png" alt="pannertikka">
+                <figcaption>Panner Tikka</figcaption>
+            </figure>
+            <figure>
+                <img src="dalmakhani.png" alt="dalmakhani">
+                <figcaption>Dal Makhani</figcaption>
+            </figure>
+            <figure>
+                <img src="gulabjamun.png" alt="gulabjamun">
+                <figcaption>Gulab Jamun</figcaption>
+            </figure>
+            <figure>
+                <img src="rasmalai.png" alt="rasmalai">
+                <figcaption>Rasmalai</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section id="reviews">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="reviews">
+            <article>
+                <h3>Priya Sharma</h3>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>Aromatic Ambiance</p>
+            </article>
+            <article>
+                <h3>Priya Sharma</h3>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>Aromatic Ambiance</p>
+            </article>
+        </div>
+    </section>
+    <section id="hours">
+        <h2 class="section-title">Opening Hours</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mon</td>
+                    <td>12 - 3PM</td>
+                    <td>7 - 11 PM</td>
+                </tr>
+                <tr>
+                    <td>Tue</td>
+                    <td>12 - 3PM</td>
+                    <td>7 - 11 PM</td>
+                </tr>
+                <tr>
+                    <td>Wed</td>
+                    <td>Closed</td>
+                    <td>7 - 11 PM</td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form action="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" placeholder="Write your message..."></textarea>
+        </form>
+    </section>
+    </main>
+    <footer id="contact">
+    <h3>Spice Route</h3>
+    <p>Authentic Flavours, Homely Taste</p>
+
+    <p>
+        📍 Mathura, Uttar Pradesh &nbsp; | &nbsp;
+        📞 +91 98765 43210
+    </p>
+
+    <p>
+        <a href="#special">Today's Special</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#hours">Opening Hours</a>
+    </p>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Spice Route. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

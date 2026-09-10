@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        .scene{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            perspective: 340px;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background: rgb(104, 5, 5);
+            transition: all 2s;
+            border: 1px solid rgb(104, 5, 5);
+        }
+        .box:hover{
+            transform: rotateX(170deg) rotateY(40deg) rotateZ(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

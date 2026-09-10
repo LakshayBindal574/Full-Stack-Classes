@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Properties</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            background-color: rgb(186, 43, 43);
+            width: 100%;
+            height: 100%;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+        .item{
+             background: red;
+        }
+        div{
+            border: 2px solid rgb(244, 229, 229);
+            font-size: 2rem;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header .footer{
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items center header">item1</div>
+        <div class="items center">item2</div>
+        <div class="items center">item3</div>
+        <div class="items center">item4</div>
+        <div class="items center">item5</div>
+        <div class="items center footer">item6</div>
+    </div>    
+</body>
+</html>

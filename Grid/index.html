@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dark CSS Grid Pattern</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #111827;
+        }
+
+
+        .grid-container {
+
+            width: 900px;
+            height: 500px;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+
+            grid-template-rows: 1fr 1fr 1fr;
+
+            gap: 3px;
+
+            background-color: #0f172a;
+        }
+
+
+        .box1 {
+            background-color: #00ff66;
+
+            grid-column: 1;
+            grid-row: 1 / 4;
+        }
+
+
+        .box2 {
+            background-color: #00ff66;
+
+            grid-column: 2 / 4;
+            grid-row: 1;
+        }
+
+
+        .box3 {
+            background-color: #ff0000;
+
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+
+        .box4 {
+            background-color: #eeff00;
+
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+
+        .box5 {
+            background-color: #fe0000;
+
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+
+        .box6 {
+            background-color: #00ff66;
+
+            grid-column: 4;
+            grid-row: 2 / 4;
+        }
+
+
+        .box7 {
+            background-color: #ff0000;
+
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+
+        .box8 {
+            background-color: #ffff00;
+
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+
+        @media (max-width: 950px) {
+
+            .grid-container {
+                width: 90vw;
+                height: 55vw;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .grid-container {
+                width: 95vw;
+                height: 70vw;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="box1"></div>
+
+        <div class="box2"></div>
+
+        <div class="box3"></div>
+
+        <div class="box4"></div>
+
+        <div class="box5"></div>
+
+        <div class="box6"></div>
+
+        <div class="box7"></div>
+
+        <div class="box8"></div>
+
+    </div>
+
+</body>
+
+</html>

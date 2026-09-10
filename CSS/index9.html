@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+            color: aliceblue;
+        }
+        .first{
+            display: block;
+            height: 200px;
+            width: 200px;
+            border:  1px solid red;
+        }
+        .second{
+            display: inline;
+            height:200px;
+            border:  1px solid red;
+
+        }
+        .third{
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+        }
+        .fourth{
+            display: none;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        This is content imside a block elemennt
+    </div>
+    <div class="first">
+        This is content imside a block elemennt
+    </div>
+    <div class="second">This is content inside inline elemennt</div>
+    <div class="second">This is conntent inside in line element </div>
+    <div class="third">his is content imside a inline-block elemennt</div>
+    <div class="third">This is content inside a inline-block elemennt</div>
+    <div class="fourth">This content inside display none block</div>
+    <div class="fifth">
+        <p>This is first para</p>
+        <p style="visibility: hidden;">This is a paragraph</p>
+        <p>End of Block</p>
+    </div>
+    <div class="sixth">
+        <p>This is first para</p>
+        <p style="display: none;">This is a paragraph</p>
+        <p>End of Block</p>
+    </div>
+</body>
+</html>

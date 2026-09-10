@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+    .box{
+        height: 200px;
+        width: 200px;
+        background-color: yellow;
+        border: 1px solid black;
+        transition: background-color 6s, border-radius 6s, transform 6s;
+        overflow: scroll;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    .box:hover{
+        background: greenyellow;
+        border-radius: 20%;
+        transform: translateX(300px) translateY(300px) scale(2.5) rotate(720deg);
+    }
+    button{
+        padding: 5px;
+        transition: background-color 0.8s, border-radius 0.8s, transform 0.8s;
+        border-radius: 3px;
+        border: 0.1px solid black;
+    }
+    button:hover{
+        background: yellow;
+        transform: scale(1.1);
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">yellow after transition box</div>
+    <button>click me</button>
+</body>
+</html>

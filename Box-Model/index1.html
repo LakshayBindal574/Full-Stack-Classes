@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox properties</title>
+    <style>
+        *{
+            background: #000;
+            color: white;
+        }
+        .container{
+            display: flex;
+            height: 1000px;
+            width: 100%;
+            border: 2px solid white;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+            flex-wrap: wrap;
+            align-self:flex-end;
+            flex-wrap: wrap-reverse;
+            align-content: flex-end;
+        }
+        .first{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin-right: 20px;
+            order: 1;
+            flex-grow: 1;
+            align-self: flex-end;
+
+        }
+        .second{
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            margin-right: 20px;
+            align-self: start;
+            order: -1;
+            flex-grow: 2;
+        }
+        .third{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            margin-right: 20px;
+            flex-grow: 3;
+        }
+        .fourth{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            color: black;
+            margin-right: 20px;
+            flex-grow: 4;
+            justify-content:flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            first box
+        </div>
+        <div class="second">
+            second box
+        </div>
+        <div class="third">
+            third box
+        </div>
+        <div class="fourth">
+            fourth box
+        </div>
+    </div>
+</body>
+</html>

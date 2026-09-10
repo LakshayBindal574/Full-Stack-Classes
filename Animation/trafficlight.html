@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 120px;
+            background-color: rgb(71, 56, 56);
+            padding: 20px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .red{
+            background-color: red;
+            animation: red 1.3s;
+            animation-delay: 0ms;
+        }
+        .yellow{
+            background-color: yellow;
+            animation: yellow 1.3s;
+            animation-delay: 1.3s;
+        }
+        .green{
+            background-color: green;
+            animation: green 1.3s;
+            animation-delay: 2.6s;
+        }
+        @keyframes red {
+            0%, 33%{
+                opacity: 0.2;
+            }
+            33%, 67%{
+                opacity: 1;
+            }
+            67%, 100%{
+                opacity: 0.2;
+            }
+        }
+        @keyframes yellow {
+            0%, 33%{
+                opacity: 0.2;
+            }
+            33%, 66%{
+                opacity: 1;
+            }
+            66%, 100%{
+                opacity: 0.2;
+            }
+        }
+        @keyframes green {
+            0%, 33%{
+                opacity: 0.2;
+            }
+            33%, 66%{
+                opacity: 1;
+            }
+            66%, 100%{
+                opacity: 0.2;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box yellow"></div>
+        <div class="box green"></div>
+    </div>
+</body>
+</html>

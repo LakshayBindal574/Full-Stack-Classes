@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid AutoFill/AutoFit</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        div{
+            background-color: antiquewhite;
+            border: 5px solid black;
+        }
+        .box1{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        .box2{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box">Html</div>
+        <div class="box">CSS</div>
+        <div class="box">JS</div>
+    </div>
+    <div class="box2">
+        <div class="box">Python</div>
+        <div class="box">hello</div>
+        <div class="box">Hello</div>
+    </div>
+</body>
+</html>

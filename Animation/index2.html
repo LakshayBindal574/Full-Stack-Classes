@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Card Effect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            perspective: 200px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease;
+        }
+
+        .scene:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .front, .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            backface-visibility: hidden;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        .front {
+            background: brown;
+            color: white;
+        }
+
+        .back {
+            background: aliceblue;
+            color: #000;
+
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="card">
+            <div class="front">Front</div>
+            <div class="back">Back</div>
+        </div>
+    </div>
+
+</body>
+</html>

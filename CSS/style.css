@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(29, 28, 28);
+    color: white;
+}
+em{
+    color: lightcoral;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Arial, sans-serif;
+}
+h1{
+    color:blue;
+}
+h2{
+    color:green;
+}
+h3{
+    color:yellow;
+}
+h4{
+    color:orange;
+}
+h5{
+    color:purple;
+}
+h6{
+    color:pink;
+}
+.first{
+    background: #000;
+    color: white;
+}
+.second{
+    background-color: aquamarine;
+    color: #000;
+}
+#third{
+    color: blue;
+}
